@@ -73,11 +73,11 @@ const initialState = {
         }
 
       case TOGGLE_TODO:
-        const isDone = action.payload.isDone === false? action.payload.isDone = true : action.payload.isDone = false
+        action.payload.isDone === false? action.payload.isDone = true : action.payload.isDone = false
         console.log(action.payload, state.todos)
         // console.log(action.payload.isDone)
         return {
-          todos:[...state.todos, isDone],
+          todos:[...state.todos],
         }
 
       default:
